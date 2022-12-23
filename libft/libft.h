@@ -6,7 +6,7 @@
 /*   By: sroger <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 15:47:19 by sroger            #+#    #+#             */
-/*   Updated: 2022/12/22 17:39:15 by sarah.roger      ###   ########.fr       */
+/*   Updated: 2022/12/23 15:18:19 by sarah.roger      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void    ft_putendl(char *s);
 void    ft_strdel(char **as);
+double	ft_atof(const char *str);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);

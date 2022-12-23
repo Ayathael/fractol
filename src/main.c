@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../fractol.h"
+#include <stdio.h>
 
 void    fract_init(t_fractol *data)
 {
@@ -20,7 +21,6 @@ void    fract_init(t_fractol *data)
         julia_init(data);
     fract_calc(data);
 }
-
 
 void    fract_calc(t_fractol *data)
 {
@@ -65,11 +65,18 @@ int        main(int ac, char **av)
     data = (t_fractol *)malloc(sizeof(t_fractol));
     if (data == NULL)
         return (-1);
-    if (ac == 2)
+    if (ac <= 4)
     {
             mlx_win_init(data);
             if ((fract_comp(av, data)) == 0)
                 return (-1);
+            if (ac == 4)
+            {
+                julia_init(data);
+                data->c_r = ft_atof(av[2]);
+                data->c_i = ft_atof(av[3]);
+            }
+            printf("x1:%f y1:%f\n", data->c_r, data->c_i);
             fract_init(data);
             mlx_hook(data->win, 6, 1L < 6, mouse_julia, data);
             mlx_hook(data->win, 17, 0L, ft_close, data);
@@ -78,7 +85,7 @@ int        main(int ac, char **av)
             mlx_loop(data->mlx);
         }
         else
-            ft_putendl("Usage /fractol \"mandelbrot\", \"julia\"");
+            ft_putendl("Usage /fractol \"mandelbrot\", \"julia\", \"julia x y\"");
         return (0);
 }
 

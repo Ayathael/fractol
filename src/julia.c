@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../fractol.h"
+#include <stdio.h>
 
 int        mouse_julia(int x, int y, t_fractol *data)
 {
@@ -37,6 +38,7 @@ void    julia_init(t_fractol *data)
 
 void    julia_calc(t_fractol *data)
 {
+    printf("x/n");
     data->z_r = data->x / data->zoom + data->x1;
     data->z_i = data->y / data->zoom + data->y1;
     data->it = 0;

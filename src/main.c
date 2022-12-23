@@ -70,14 +70,14 @@ int        main(int ac, char **av)
             mlx_win_init(data);
             if ((fract_comp(av, data)) == 0)
                 return (-1);
+            fract_init(data);
             if (ac == 4)
             {
-                julia_init(data);
                 data->c_r = ft_atof(av[2]);
                 data->c_i = ft_atof(av[3]);
+                fract_calc(data);
             }
             printf("x1:%f y1:%f\n", data->c_r, data->c_i);
-            fract_init(data);
             mlx_hook(data->win, 6, 1L < 6, mouse_julia, data);
             mlx_hook(data->win, 17, 0L, ft_close, data);
             mlx_key_hook(data->win, key_hook, data);

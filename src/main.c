@@ -73,9 +73,9 @@ int        main(int ac, char **av)
             fract_init(data);
             if (ac == 4)
             {
+                fract_calc(data);
                 data->c_r = ft_atof(av[2]);
                 data->c_i = ft_atof(av[3]);
-                fract_calc(data);
             }
             printf("x1:%f y1:%f\n", data->c_r, data->c_i);
             mlx_hook(data->win, 6, 1L < 6, mouse_julia, data);

@@ -18,7 +18,7 @@ int        mouse_julia(int x, int y, t_fractol *data)
     if (data->fract == 1 && data->julia_mouse == 1)
     {
         data->c_r = x * 2;
-        data->c_i = y * 2 - 800;
+        data->c_i = (y * 2 - 800);
         fract_calc(data);
     }
     return (0);
@@ -31,9 +31,10 @@ void    julia_init(t_fractol *data)
     data->x1 = -2.0;
     data->y1 = -1.9;
     data->color = 265;
-    data->c_r = 0.285;
-    data->c_i = 0.01;
+  /* data->c_r = 0.285;
+    data->c_i = 0.01;*/
     data->julia_mouse = 1;
+    printf("3");
 }
 
 void    julia_calc(t_fractol *data)
@@ -46,8 +47,8 @@ void    julia_calc(t_fractol *data)
     {
         data->tmp = data->z_r;
         data->z_r = data->z_r * data->z_r -
-            data->z_i * data->z_i - 0.8 + (data->c_r / WIDTH);
-        data->z_i = 2 * data->z_i * data->tmp + data->c_i / WIDTH;
+            data->z_i * data->z_i + data->c_r ;
+        data->z_i = 2 * data->z_i * data->tmp + data->c_i ;
         data->it++;
     }
     if (data->it == data->it_max)
@@ -74,6 +75,7 @@ void    *julia(void *tab)
         }
         data->x++;
     }
+    printf("x1:%f y1:%f\n", data->c_r, data->c_i);
     return (tab);
 }
 

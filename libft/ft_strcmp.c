@@ -6,7 +6,7 @@
 /*   By: sarah.roger <diamonstarlighting@gmail.com  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 21:34:44 by sarah.roger       #+#    #+#             */
-/*   Updated: 2022/12/18 21:35:14 by sarah.roger      ###   ########.fr       */
+/*   Updated: 2023/01/09 18:07:36 by sarah.roger      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')

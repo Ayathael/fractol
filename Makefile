@@ -22,6 +22,7 @@ SRC_FILES = main.c \
             hook.c \
             mandelbrot.c \
 			julia.c \
+			error.c \
 			
 SRC_DIR = src/
 SRC = ${addprefix ${SRC_DIR}, ${SRC_FILES}}

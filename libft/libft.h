@@ -6,7 +6,7 @@
 /*   By: sroger <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 15:47:19 by sroger            #+#    #+#             */
-/*   Updated: 2022/12/23 15:18:19 by sarah.roger      ###   ########.fr       */
+/*   Updated: 2023/01/09 18:01:04 by sarah.roger      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t len);
 size_t	ft_strlcpy(char *dest, const char *src, size_t len);
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int     ft_strcmp(char *s1, char *s2);
+int		ft_strcmp(char *s1, char *s2);
 char	*ft_strnstr(const char *big, const char *little, size_t n);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -59,8 +59,8 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-void    ft_putendl(char *s);
-void    ft_strdel(char **as);
+void	ft_putendl(char *s);
+void	ft_strdel(char **as);
 double	ft_atof(const char *str);
 
 t_list	*ft_lstnew(void *content);
